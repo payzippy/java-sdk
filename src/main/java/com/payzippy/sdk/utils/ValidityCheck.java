@@ -220,18 +220,20 @@ public class ValidityCheck
 		{
 			throw new IllegalArgumentException("INVALID SHIPPING ADDRESS");
 		}
-		// validating shipping_city
-		else if (params.containsKey(Constants.SHIPPING_CITY)
-		        && params.get(Constants.SHIPPING_CITY).toString().length() > Constants.SHIPPING_CITY_MAXLEN)
-		{
-			throw new IllegalArgumentException("INVALID SHIPPING_CITY");
-		}
-		// validating shipping_state
-		else if (params.containsKey(Constants.SHIPPING_STATE)
-		        && params.get(Constants.SHIPPING_STATE).toString().length() > Constants.SHIPPING_STATE_MAXLEN)
-		{
-			throw new IllegalArgumentException("INVALID SHIPPING_STATE");
-		}
+		/*
+		 * validating shipping_city
+		 * else if (params.containsKey(Constants.SHIPPING_CITY)
+		 * && params.get(Constants.SHIPPING_CITY).toString().length() > Constants.SHIPPING_CITY_MAXLEN)
+		 * {
+		 * throw new IllegalArgumentException("INVALID SHIPPING_CITY");
+		 * }
+		 * // validating shipping_state
+		 * else if (params.containsKey(Constants.SHIPPING_STATE)
+		 * && params.get(Constants.SHIPPING_STATE).toString().length() > Constants.SHIPPING_STATE_MAXLEN)
+		 * {
+		 * throw new IllegalArgumentException("INVALID SHIPPING_STATE");
+		 * }
+		 */
 		// validating shipping_zip
 		else if (params.containsKey(Constants.SHIPPING_ZIP)
 		        && params.get(Constants.SHIPPING_ZIP).toString().length() > Constants.SHIPPING_ZIP_MAXLEN)
@@ -268,18 +270,20 @@ public class ValidityCheck
 		{
 			throw new IllegalArgumentException("INVALID BILLING_ADDRESS");
 		}
-		// validating billing_city
-		else if (params.containsKey(Constants.BILLING_CITY)
-		        && params.get(Constants.BILLING_CITY).toString().length() > Constants.BILLING_CITY_MAXLEN)
-		{
-			throw new IllegalArgumentException("INVALID BILLING_CITY");
-		}
-		// validating billing_state
-		else if (params.containsKey(Constants.BILLING_STATE)
-		        && params.get(Constants.BILLING_STATE).toString().length() > Constants.BILLING_STATE_MAXLEN)
-		{
-			throw new IllegalArgumentException("INVALID BILLING_STATE");
-		}
+		/*
+		 * validating billing_city
+		 * else if (params.containsKey(Constants.BILLING_CITY)
+		 * && params.get(Constants.BILLING_CITY).toString().length() > Constants.BILLING_CITY_MAXLEN)
+		 * {
+		 * throw new IllegalArgumentException("INVALID BILLING_CITY");
+		 * }
+		 * // validating billing_state
+		 * else if (params.containsKey(Constants.BILLING_STATE)
+		 * && params.get(Constants.BILLING_STATE).toString().length() > Constants.BILLING_STATE_MAXLEN)
+		 * {
+		 * throw new IllegalArgumentException("INVALID BILLING_STATE");
+		 * }
+		 */
 		// validating billing_zip
 		else if (params.containsKey(Constants.BILLING_ZIP)
 		        && params.get(Constants.BILLING_ZIP).toString().length() > Constants.BILLING_ZIP_MAXLEN)
