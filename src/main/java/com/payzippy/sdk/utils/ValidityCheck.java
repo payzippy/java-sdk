@@ -49,7 +49,7 @@ public class ValidityCheck
 		}
 		// Validating refund amount
 		else if (isNullOrEmpty(params.get(Constants.REFUND_AMOUNT))
-		        || !NumberUtils.isNumber(params.get(Constants.REFUND_AMOUNT).toString()))
+		        || !NumberUtils.isDigits(params.get(Constants.REFUND_AMOUNT).toString()))
 		{
 			throw new IllegalArgumentException("INVALID REFIND_AMOUNT");
 		}
@@ -144,7 +144,7 @@ public class ValidityCheck
 
 		// Validating transaction amount
 		else if (isNullOrEmpty(params.get(Constants.TRANSACTION_AMOUNT))
-		        || !NumberUtils.isNumber(params.get(Constants.TRANSACTION_AMOUNT).toString()))
+		        || !NumberUtils.isDigits(params.get(Constants.TRANSACTION_AMOUNT).toString()))
 		{
 			throw new IllegalArgumentException("INVALID TRANSACTION AMOUNT");
 		}
@@ -164,7 +164,7 @@ public class ValidityCheck
 		// Validating EMI value
 		else if ("emi".equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
 		        && (isNullOrEmpty(params.get(Constants.EMI_MONTHS))
-		                || !NumberUtils.isNumber(params.get(Constants.EMI_MONTHS).toString()) || Integer
+		                || !NumberUtils.isDigits(params.get(Constants.EMI_MONTHS).toString()) || Integer
 		                .parseInt(params.get(Constants.EMI_MONTHS).toString()) <= 0))
 		{
 			throw new IllegalArgumentException("INVALID EMI MONTHS");
@@ -299,7 +299,7 @@ public class ValidityCheck
 		// validating min_sla
 		else if (params.containsKey(Constants.MIN_SLA)
 		        && (params.get(Constants.MIN_SLA).toString().length() > Constants.MIN_SLA_MAXLEN || !NumberUtils
-		                .isNumber(params.get(Constants.MIN_SLA).toString())))
+		                .isDigits(params.get(Constants.MIN_SLA).toString())))
 		{
 			throw new IllegalArgumentException("INVALID MIN_SLA");
 		}
@@ -314,7 +314,7 @@ public class ValidityCheck
 		// validating address_count
 		else if (params.containsKey(Constants.ADDRESS_COUNT)
 		        && (params.get(Constants.ADDRESS_COUNT).toString().length() > Constants.ADDRESS_COUNT_MAXLEN || !NumberUtils
-		                .isNumber(params.get(Constants.ADDRESS_COUNT).toString())))
+		                .isDigits(params.get(Constants.ADDRESS_COUNT).toString())))
 		{
 			throw new IllegalArgumentException("INVALID ADDRESS_COUNT");
 		}
@@ -343,7 +343,7 @@ public class ValidityCheck
 		// validating min_sla
 		else if (params.containsKey(Constants.MIN_SLA)
 		        && (params.get(Constants.MIN_SLA).toString().length() > Constants.MIN_SLA_MAXLEN || !NumberUtils
-		                .isNumber(params.get(Constants.MIN_SLA).toString())))
+		                .isDigits(params.get(Constants.MIN_SLA).toString())))
 		{
 			throw new IllegalArgumentException("INVALID MIN_SLA");
 		}

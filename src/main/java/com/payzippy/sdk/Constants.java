@@ -31,8 +31,8 @@ public class Constants
 	public static final String SHIPPING_ZIP = "shipping_zip";
 	public static final String SHIPPING_COUNTRY = "shipping_country";
 	public static final String SOURCE = "source";
-	public static final String CALLBACK_URL = "CALLBACK_URL";
-	public static final String BILLING_NAME = "BILLING_NAME";
+	public static final String CALLBACK_URL = "callback_url";
+	public static final String BILLING_NAME = "billing_name";
 	public static final String BILLING_ADDRESS = "billing_address";
 	public static final String BILLING_CITY = "billing_city";
 	public static final String BILLING_STATE = "billing_state";
@@ -64,10 +64,10 @@ public class Constants
 	public static final String REFUND_AMOUNT = "refund_amount";
 	public static final String REFUND_REASON = "refund_reason";
 	public static final String REFUNDED_BY = "refunded_by";
-	public static final String STATUS_CODE = "STAUS_CODE";
-	public static final String STATUS_MESSAGE = "STATUS_MESSAGE";
+	public static final String STATUS_CODE = "status_code";
+	public static final String STATUS_MESSAGE = "status_message";
 	public static final String ERROR_CODE = "error_code";
-	public static final String ERROR_MESSAGE = "ERROR_MESSAGE";
+	public static final String ERROR_MESSAGE = "error_message";
 	public static final String REFUND_STATUS = "refund_status";
 	public static final String REFUND_RESPONSE_CODE = "refund_response_code";
 	public static final String REFUND_RESPONSE_MESSAGE = "refund_response_message";

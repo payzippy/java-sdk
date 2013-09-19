@@ -1,12 +1,10 @@
 package com.payzippy.sdk.utils;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -74,7 +72,6 @@ public enum WebClient
 	public Map<String, Object> doQuery(Map<String, Object> params, String baseUrl) throws Exception
 	{
 		return (new ObjectMapper()).readValue(doPost(params, baseUrl), Map.class);
-
 	}
 
 	public Map<String, Object> doRefund(Map<String, Object> params, String baseUrl) throws Exception

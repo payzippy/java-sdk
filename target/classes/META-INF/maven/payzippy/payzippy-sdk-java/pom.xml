@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>payzippy</groupId>
 	<artifactId>payzippy-sdk-java</artifactId>
-	<version>v0</version>
+	<version>v0.0</version>
 	<name>payzippy-sdk-java</name>
 	<dependencies>
 		<dependency>
