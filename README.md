@@ -1,4 +1,4 @@
 java-sdk
 ========
 
-PayZippy Java SDK for interacting PayZippy charging, query and refund APIs
+PayZippy Java SDK for interacting with PayZippy charging, query and refund APIs
