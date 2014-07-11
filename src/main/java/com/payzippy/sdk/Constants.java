@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Constants
 {
-	public static final List<String> validPaymentMethods = Arrays.asList("CREDIT", "DEBIT", "EMI", "NET", "PAYZIPPY");
+	public static final List<String> validPaymentMethods = Arrays.asList("CREDIT", "DEBIT", "EMI", "NET", "PAYZIPPY",
+	        "CARD_CAPTURE");
 	public static final List<String> bankNameRequirement = Arrays.asList("EMI", "NET");
 	public static final List<String> uiModeRequirements = Arrays.asList("REDIRECT", "IFRAME");
 	public static final List<String> hashMethodRequirements = Arrays.asList("SHA256", "MD5");
@@ -15,9 +16,16 @@ public class Constants
 	public static final String MERCHANT_TRANSACTION_ID = "merchant_transaction_id";
 	public static final String TRANSACTION_TYPE = "transaction_type";
 	public static final String TRANSACTION_AMOUNT = "transaction_amount";
+
 	public static final String PAYMENT_METHOD = "payment_method";
 	public static final String BANK_NAME = "bank_name";
 	public static final String EMI_MONTHS = "emi_months";
+	public static final String NAME_ON_CARD = "name_on_card";
+	public static final String CARD_NUMBER = "card_number";
+	public static final String CVV = "cvv";
+	public static final String EXPIRY_MONTH = "expiry_month";
+	public static final String EXPIRY_YEAR = "expiry_year";
+
 	public static final String CURRENCY = "currency";
 	public static final String UI_MODE = "ui_mode";
 	public static final String HASH_METHOD = "hash_method";

@@ -41,6 +41,11 @@ public class ChargingRequest
 
 		}
 
+		/**
+		 * DEBIT, CREDIT, EMI, NET, PAYZIPPY, CARD_CAPTURE can be used.
+		 * Card capture is a restricted payment method, which needs to be enabled for the merchant before it can be
+		 * used.
+		 */
 		public ChargingRequestBuilder setPaymentMethod(String paymentMethod)
 		{
 			requestParams.put(Constants.PAYMENT_METHOD, paymentMethod);
@@ -51,6 +56,66 @@ public class ChargingRequest
 		public ChargingRequestBuilder setEmiMonths(String emiMonths)
 		{
 			requestParams.put(Constants.EMI_MONTHS, emiMonths);
+			return this;
+
+		}
+
+		/**
+		 * Optional if CARD_CAPTURE is used as payment method.
+		 * @param nameOnCard
+		 * @return
+		 */
+		public ChargingRequestBuilder setNameOnCard(String nameOnCard)
+		{
+			requestParams.put(Constants.NAME_ON_CARD, nameOnCard);
+			return this;
+
+		}
+
+		/**
+		 * Mandatory if CARD_CAPTURE is used as payment method.
+		 * @param cardNumber
+		 * @return
+		 */
+		public ChargingRequestBuilder setCardNumber(String cardNumber)
+		{
+			requestParams.put(Constants.CARD_NUMBER, cardNumber);
+			return this;
+
+		}
+
+		/**
+		 * Optional if CARD_CAPTURE is used as payment method.
+		 * @param cvv
+		 * @return
+		 */
+		public ChargingRequestBuilder setCVV(String cvv)
+		{
+			requestParams.put(Constants.CVV, cvv);
+			return this;
+
+		}
+
+		/**
+		 * Mandatory if CARD_CAPTURE is used as payment method.
+		 * @param expiryMonth
+		 * @return
+		 */
+		public ChargingRequestBuilder setExpiryMonth(String expiryMonth)
+		{
+			requestParams.put(Constants.EXPIRY_MONTH, expiryMonth);
+			return this;
+
+		}
+
+		/**
+		 * Mandatory if CARD_CAPTURE is used as payment method.
+		 * @param expiryYear
+		 * @return
+		 */
+		public ChargingRequestBuilder setExpiryYear(String expiryYear)
+		{
+			requestParams.put(Constants.EXPIRY_YEAR, expiryYear);
 			return this;
 
 		}
@@ -175,6 +240,31 @@ public class ChargingRequest
 	public String getEmiMonths()
 	{
 		return requestParams.get(Constants.EMI_MONTHS).toString();
+	}
+
+	public String getNameOnCard()
+	{
+		return requestParams.get(Constants.NAME_ON_CARD).toString();
+	}
+
+	public String getCardNumber()
+	{
+		return requestParams.get(Constants.CARD_NUMBER).toString();
+	}
+
+	public String getCVV()
+	{
+		return requestParams.get(Constants.CVV).toString();
+	}
+
+	public String getExpiryMonth()
+	{
+		return requestParams.get(Constants.EXPIRY_MONTH).toString();
+	}
+
+	public String getExpiryYear()
+	{
+		return requestParams.get(Constants.EXPIRY_YEAR).toString();
 	}
 
 	public String getCurrency()
