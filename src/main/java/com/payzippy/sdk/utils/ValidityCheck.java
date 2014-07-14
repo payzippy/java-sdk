@@ -171,22 +171,22 @@ public class ValidityCheck
 		}
 
 		// validating CARD_CAPTURE value
-		else if ("card_capture".equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
+		else if (Constants.CARD_CAPTURE.equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
 		        && (isNullOrEmpty(params.get(Constants.CARD_NUMBER))))
 		{
-			throw new IllegalArgumentException("INVALID CARD NUMBER");
+			throw new IllegalArgumentException("INVALID CARD NUMBER FOR CARD CAPTURE PAYMENT METHOD");
 		}
 
-		else if ("card_capture".equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
+		else if (Constants.CARD_CAPTURE.equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
 		        && (isNullOrEmpty(params.get(Constants.EXPIRY_MONTH))))
 		{
-			throw new IllegalArgumentException("INVALID EXPIRY MONTH");
+			throw new IllegalArgumentException("INVALID EXPIRY MONTH FOR CARD CAPTURE PAYMENT METHOD");
 		}
 
-		else if ("card_capture".equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
+		else if (Constants.CARD_CAPTURE.equalsIgnoreCase(params.get(Constants.PAYMENT_METHOD).toString())
 		        && (isNullOrEmpty(params.get(Constants.EXPIRY_YEAR))))
 		{
-			throw new IllegalArgumentException("INVALID EXPIRY YEAR");
+			throw new IllegalArgumentException("INVALID EXPIRY YEAR FOR CARD CAPTURE PAYMENT METHOD");
 		}
 
 		// Validating currency
