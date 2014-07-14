@@ -20,6 +20,7 @@ public class Constants
 	public static final String PAYMENT_METHOD = "payment_method";
 	public static final String BANK_NAME = "bank_name";
 	public static final String EMI_MONTHS = "emi_months";
+	public static final String CARD_CAPTURE = "card_capture";
 	public static final String NAME_ON_CARD = "name_on_card";
 	public static final String CARD_NUMBER = "card_number";
 	public static final String CVV = "cvv";
