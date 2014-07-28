@@ -26,7 +26,7 @@ public class ChargingResponse
 
 	public boolean isFraud()
 	{
-		return "Accept".equalsIgnoreCase(String.valueOf(responseParams.get(Constants.FRAUD_ACTION)));
+		return !"Accept".equalsIgnoreCase(String.valueOf(responseParams.get(Constants.FRAUD_ACTION)));
 	}
 
 	public boolean isSuccess()
