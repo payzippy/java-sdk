@@ -41,6 +41,10 @@ response.sendRedirect(url);
 <iframe src="<%=url%>" height="450" width="50%">
 </iframe>
 
+//The parameters item_vertical,item_total and buyer_phone_no are now mandatory.Pass these parameters for all the transactions(both domestic and international).
+public ChargingRequestBuilder putParams(String key, Object value);
+eg: putParams("item_vertical",books)
+
 For complete documentation, please refer the link https://github.com/payzippy/java-sdk/wiki/PayZippy-Java-SDK.
 
 ```
